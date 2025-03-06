@@ -1,10 +1,12 @@
-<ul class="mt-4">
+<div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     @for(pokemon of pokemons; track pokemon){
-        <li class="p-4 border rounded-lg shadow-md bg-white">
+        <div class="p-4 border rounded-lg shadow-md bg-white">
+            <img [src]="pokemon.img" [alt]="pokemon.name" class="w-auto h-auto">
             <h2 class="text-xl font-bold text-gray-800">{{ pokemon.name }}</h2>
+            <p class="text-gray-600"><strong>Catégorie:</strong> {{ pokemon.categorie }}</p>
             <p class="text-gray-600"><strong>Type:</strong> {{ pokemon.type }}</p>
             <p class="text-gray-600"><strong>Taille:</strong> {{ pokemon.size }}</p>
             <p class="text-gray-600"><strong>Poids:</strong> {{ pokemon.weight }}</p>
-        </li>
+        </div>
     }
-</ul>
+</div>
