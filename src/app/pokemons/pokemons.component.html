@@ -1,1 +1,10 @@
-<p>pokemons works!</p>
+<ul class="mt-4">
+    @for(pokemon of pokemons; track pokemon){
+        <li class="p-4 border rounded-lg shadow-md bg-white">
+            <h2 class="text-xl font-bold text-gray-800">{{ pokemon.name }}</h2>
+            <p class="text-gray-600"><strong>Type:</strong> {{ pokemon.type }}</p>
+            <p class="text-gray-600"><strong>Taille:</strong> {{ pokemon.size }}</p>
+            <p class="text-gray-600"><strong>Poids:</strong> {{ pokemon.weight }}</p>
+        </li>
+    }
+</ul>
