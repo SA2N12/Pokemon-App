@@ -1,6 +1,14 @@
+<nav class="bg-gray-800 p-4">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <a routerLink="/"><img src="logo.png" alt="Logo" class="h-16 w-auto"></a>
+    <div>
+      <a routerLink="/generations" routerLinkActive="text-yellow-500" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Generations</a>
+      <a routerLink="/pokemons" routerLinkActive="text-yellow-500" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer">Pokemons</a>
+    </div>
+  </div>
+</nav>
+
 <main class="main max-w-6xl mx-auto p-4">
-  <app-generations></app-generations>
-  <app-pokemons></app-pokemons>
 </main>
 
 <router-outlet />
