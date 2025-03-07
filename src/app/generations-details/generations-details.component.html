@@ -1,0 +1,12 @@
+<main class="max-w-6xl mx-auto p-4">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-4">
+      Détails de la {{generation}}
+    </h1>
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      @for(pokemon of pokemonsDetailGeneration; track pokemon){
+          <div class="p-4 border rounded-lg shadow-md bg-white">
+              <h2 class="text-xl font-bold text-gray-800">{{ pokemon.name }}</h2>
+          </div>
+      }
+  </div>
+</main>

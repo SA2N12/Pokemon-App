@@ -1,7 +1,11 @@
 <main class="main max-w-6xl mx-auto p-4">
     <ul class="list-noneng ser pl-5 space-y-2">
         @for(generation of generations; track generation){
-            <li class="text-lg font-semibold text-gray-700">{{generation}}</li>
+            <li class="cursor-pointer">
+                <a [routerLink]="['/generations', generation.name]" [queryParams]="{url: generation.url}" class="text-lg font-semibold text-gray-700">
+                    {{generation.name}}
+                </a>
+            </li>
         }
     </ul>
 </main>
