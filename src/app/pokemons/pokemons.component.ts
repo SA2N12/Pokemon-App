@@ -26,6 +26,7 @@ export class PokemonsComponent {
         for(let i=0; i<data.results.length; i++){
           this.pokemons.push(pokemons[i]);
           let url :string = this.pokemons[i].url;
+          console.log(url);
           this.pokemonSrv.getPokemonsDetail(url).subscribe({
             next: (data :any)=>{
               this.pokemonsDetail.push(data);

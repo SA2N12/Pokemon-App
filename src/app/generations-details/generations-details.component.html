@@ -3,9 +3,12 @@
       Détails de la {{generation}}
     </h1>
     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-      @for(pokemon of pokemonsDetailGeneration; track pokemon){
+      @for(pokemon of pokemons; track pokemon){
           <div class="p-4 border rounded-lg shadow-md bg-white">
-              <h2 class="text-xl font-bold text-gray-800">{{ pokemon.name }}</h2>
+            <img [src]="pokemon.sprites.front_default" [alt]="pokemon.name" class="w-auto h-auto">
+            <h2 class="text-xl font-bold text-gray-800">{{ pokemon.name }}</h2>
+            <p class="text-gray-600"><strong>Taille:</strong> {{ pokemon.height/10 }}<span>m</span></p>
+            <p class="text-gray-600"><strong>Poids:</strong> {{ pokemon.weight/10 }}<span>kg</span></p>
           </div>
       }
   </div>
